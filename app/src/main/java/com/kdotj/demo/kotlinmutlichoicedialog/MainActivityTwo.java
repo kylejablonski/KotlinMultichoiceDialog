@@ -11,7 +11,7 @@ import android.view.View;
 
 import java.util.Locale;
 
-public class MainActivityTwo  extends AppCompatActivity {
+public class MainActivityTwo extends AppCompatActivity {
 
     private AppCompatTextView textViewSelection;
 
@@ -34,7 +34,7 @@ public class MainActivityTwo  extends AppCompatActivity {
                                 new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialogInterface, int i) {
-                                        String [] options = getResources().getStringArray(R.array.custom_options);
+                                        String[] options = getResources().getStringArray(R.array.custom_options);
                                         textViewSelection.setText(String.format(Locale.getDefault(), getString(R.string.dogs_selection_text), options[i]));
                                     }
                                 });
@@ -42,5 +42,26 @@ public class MainActivityTwo  extends AppCompatActivity {
                 alertDialog.show();
             }
         });
+
+        // or without the wrapper
+        btnSingleChoiceDialog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivityTwo.this, R.style.AppTheme_Dialog);
+                builder.setTitle(getString(R.string.dogs_title))
+                builder.setSingleChoiceItems(getResources().getStringArray(R.array.custom_options), 0,
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                String[] options = getResources().getStringArray(R.array.custom_options);
+                                textViewSelection.setText(String.format(Locale.getDefault(), getString(R.string.dogs_selection_text), options[i]));
+                            }
+                        });
+
+                AlertDialog alertDialog = builder.create();
+                alertDialog.show();
+            }
+        });
+
     }
 }

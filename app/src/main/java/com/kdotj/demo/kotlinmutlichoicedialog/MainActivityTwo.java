@@ -8,7 +8,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatButton;
 import android.support.v7.widget.AppCompatTextView;
 import android.view.View;
-import android.widget.Toast;
 
 import java.util.Locale;
 
@@ -22,6 +21,7 @@ public class MainActivityTwo  extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        textViewSelection = findViewById(R.id.textViewSelection);
 
         AppCompatButton btnSingleChoiceDialog = findViewById(R.id.btnCustomDialog);
         btnSingleChoiceDialog.setOnClickListener(new View.OnClickListener() {
@@ -35,7 +35,7 @@ public class MainActivityTwo  extends AppCompatActivity {
                                     @Override
                                     public void onClick(DialogInterface dialogInterface, int i) {
                                         String [] options = getResources().getStringArray(R.array.custom_options);
-                                        Toast.makeText(MainActivityTwo.this, String.format(Locale.getDefault(), getString(R.string.dogs_selection_text), options[i]), Toast.LENGTH_LONG).show();
+                                        textViewSelection.setText(String.format(Locale.getDefault(), getString(R.string.dogs_selection_text), options[i]));
                                     }
                                 });
 

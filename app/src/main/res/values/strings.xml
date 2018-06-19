@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">KotlinMutlichoiceDialog</string>
+    <string name="instructions_text">Select the buttons below to show a new option from the selections!</string>
+    <string name="nothing_selected">Nothing selected</string>
+
+    <string name="dogs_title">Favorite dog?</string>
+    <string-array name="custom_options">
+        <item>Australian Cattle Dog</item>
+        <item>Chow-Chow</item>
+        <item>Golden Retriever</item>
+        <item>Labrador</item>
+        <item>Pomeranian</item>
+    </string-array>
+
+    <string name="dogs_selection_text">Woof woof! you like %ss</string>
+
+    <string name="fruit_title">Favorite fruit?</string>
+    <string-array name="anko_options">
+        <item>An apple</item>
+        <item>A banana</item>
+        <item>Cantaloupe</item>
+        <item>Strawberry</item>
+        <item>Pineapple</item>
+    </string-array>
+
+    <string name="fruits_selection_text">Mmmm&#8230; %s is delicious</string>
+    <string name="accept">Accept Terms</string>
+</resources>

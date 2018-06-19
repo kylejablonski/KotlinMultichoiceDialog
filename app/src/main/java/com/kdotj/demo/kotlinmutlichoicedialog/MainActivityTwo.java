@@ -48,7 +48,7 @@ public class MainActivityTwo extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(MainActivityTwo.this, R.style.AppTheme_Dialog);
-                builder.setTitle(getString(R.string.dogs_title))
+                builder.setTitle(getString(R.string.dogs_title));
                 builder.setSingleChoiceItems(getResources().getStringArray(R.array.custom_options), 0,
                         new DialogInterface.OnClickListener() {
                             @Override
